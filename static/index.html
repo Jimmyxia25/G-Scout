@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G-Scout · 海外户外装备价格监测</title>
+</head>
+<body>
+  <h1>G-Scout</h1>
+  <p>海外户外网站装备价格与折扣监测（原型）</p>
+
+  <div id="controls">
+    <label>网站:
+      <select id="site"><option value="">全部</option></select>
+    </label>
+    <label>品类:
+      <select id="category"><option value="">全部</option></select>
+    </label>
+    <label>最低折扣 %:
+      <input id="minDiscount" type="number" min="0" max="100" value="0" style="width:4em" />
+    </label>
+    <button id="refresh">刷新列表</button>
+    <button id="scrape">抓取最新</button>
+    <span id="status"></span>
+  </div>
+
+  <table id="results" border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>网站</th><th>品类</th><th>品牌</th><th>商品</th>
+        <th>现价</th><th>原价</th><th>折扣</th><th>抓取时间</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
